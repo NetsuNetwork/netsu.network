@@ -1,0 +1,9 @@
+---
+import Title from './Title.svelte';
+
+const req = await fetch(`${Astro.url}/words.txt`)
+const text = await req.text()
+const words = text.split('\n')
+---
+
+<Title client:load words={words} />
