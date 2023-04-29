@@ -1,9 +1,63 @@
 ---
-import Title from './Title.svelte';
-
-const req = await fetch(`${Astro.url}/words.txt`)
-const text = await req.text()
-const words = text.split('\n')
+import MetaButtons from './MetaButtons.svelte';
 ---
 
-<Title client:load client:only words={words} />
+<main class='h-screen w-screen'>
+  <div class='flex flex-col items-center justify-center h-screen'>
+    <h1 class='text-8xl text-white'>
+      NetSu.<span class='text-lg font-bold' id='glitch' data-value='NETWORK'
+        >NETWORK</span
+      >
+    </h1>
+    <MetaButtons />
+    <div class='grid grid-flow-row-dense'>
+      <h2 class='text-white text-2xl' id='owo' style='opacity: 0;'>
+        Welcome to NetSu
+      </h2>
+    </div>
+  </div>
+</main>
+
+<script>
+  const gl = document.getElementById('glitch')
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%$#'
+
+  gl.addEventListener('mouseover', async () => {
+    let iters = 0
+
+    let interval: number
+    clearInterval(interval)
+
+    interval = setInterval(() => {
+      gl.innerText = gl.innerText
+        .split('')
+        .map((_letter, index) => {
+          if (index < iters) {
+            return (gl.dataset as any).value[index]
+          }
+          return alphabet[Math.floor(Math.random() * alphabet.length)]
+        })
+        .join('')
+
+      if (iters > 7) clearInterval(interval)
+
+      iters += 1 / 3
+    }, 50)
+  })
+  ;(async () => {
+    const owo = document.getElementById('owo')
+    try {
+      const req = await fetch('/words.txt')
+      const text = await req.text()
+      const words = text.split('\n')
+
+      const newIndex = Math.floor(Math.random() * words.length)
+      const newWord = words[newIndex]
+
+      owo.textContent = newWord
+      owo.style.opacity = '1'
+    } catch {
+      throw null
+    }
+  })()
+</script>
