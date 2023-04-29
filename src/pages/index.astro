@@ -1,19 +1,8 @@
 ---
-import Title from '../components/Title.astro';
-import '../styles/global.scss';
+import Title from "../components/Title.astro";
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 ---
 
-<html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <link rel='icon' href='/favicon.ico' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    <title>NetSu</title>
-  </head>
-  <body>
-    <div class='w-screen h-screen max-h-screen prose prose-zinc max-w-screen'>
-      <Title />
-    </div>
-  </body>
-</html>
+<PrimaryLayout>
+    <Title />
+</PrimaryLayout>

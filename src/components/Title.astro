@@ -6,4 +6,4 @@ const text = await req.text()
 const words = text.split('\n')
 ---
 
-<Title client:load words={words} />
+<Title client:load client:only words={words} />

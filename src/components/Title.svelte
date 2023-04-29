@@ -40,38 +40,26 @@
   })
 </script>
 
-<main>
+<main class='h-screen w-screen'>
   <div class="flex flex-col items-center justify-center h-screen">
-    <h1>
-      NetSu.<span class="network" id="glitch" data-value="NETWORK">NETWORK</span
+    <h1 class='text-8xl text-white'>
+      NetSu.<span class="text-lg font-bold" id="glitch" data-value="NETWORK">NETWORK</span
       >
     </h1>
     <MetaButtons />
-    <div class="grid grid-flow-row-dense text-sm lg:text-lg">
-      <h2 id="owo" style="opacity: 0;">{bottomText}</h2>
+    <div class="grid grid-flow-row-dense">
+      <h2 class="text-white text-sm lg:text-lg" id="owo" style="opacity: 0;">{bottomText}</h2>
     </div>
   </div>
 </main>
 
-<style lang='scss'>
+<style lang="scss">
   h1 {
     background: linear-gradient(to right, #b4d9ef, #f8c57c, #f8c57c);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     margin: 0;
-
-    @apply text-8xl;
-  }
-
-  main {
-    @apply h-screen w-screen;
-  }
-
-  span {
-    &.network {
-      @apply text-lg font-bold;
-    }
   }
 
   h2 {
