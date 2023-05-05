@@ -47,7 +47,7 @@ import MetaButtons from './MetaButtons.svelte';
   ;(async () => {
     const owo = document.getElementById('owo')
     try {
-      const req = await fetch('https://netsu-cdn.netsu.network/words.txt')
+      const req = await fetch('/words.txt')
       const text = await req.text()
       const words = text.split('\n')
 
