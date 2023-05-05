@@ -2,7 +2,7 @@
 import MetaButtons from './MetaButtons.svelte';
 ---
 
-<main class='h-screen w-screen'>
+<main class='w-screen'>
   <div class='flex flex-col items-center justify-center h-screen'>
     <h1 class='text-8xl text-white'>
       NetSu.<span class='text-lg font-bold' id='glitch' data-value='NETWORK'
@@ -47,7 +47,7 @@ import MetaButtons from './MetaButtons.svelte';
   ;(async () => {
     const owo = document.getElementById('owo')
     try {
-      const req = await fetch('/words.txt')
+      const req = await fetch('https://netsu-cdn.netsu.network/words.txt')
       const text = await req.text()
       const words = text.split('\n')
 
