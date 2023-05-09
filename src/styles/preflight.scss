@@ -4,14 +4,21 @@
 
 @import './scrollbar.scss';
 
-/* * {
-//   border-width: 2px;
-//   border-color: red;
-} */
+* {
+    border-width: 2px;
+    border-color: red;
+}
+
+
+* {
+  box-sizing: border-box;
+  max-width: 98vw;
+}
 
 body {
   background-color: #1C1E1E;
-  width: 90vw !important;
+  width: 100vw !important;
+  scroll-behavior: smooth;
 }
 
 :where(h1) {
@@ -26,8 +33,4 @@ body {
   color: white;
   opacity: 1;
   transition: opacity 2s ease-in-out;
-}
-
-:where(.w-screen) {
-  width: 100dvw !important;
 }
