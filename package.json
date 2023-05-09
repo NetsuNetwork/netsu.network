@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/mdx": "^0.19.1",
     "@astrojs/netlify": "^2.2.2",
+    "@astrojs/prefetch": "^0.2.1",
     "@astrojs/svelte": "^2.1.0",
     "@astrojs/vercel": "^3.2.5",
     "astro": "^2.3.2",

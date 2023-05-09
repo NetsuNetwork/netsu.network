@@ -7,7 +7,7 @@
     href="https://github.com/NetsuNetwork"
     class="ml-4 text-lg text-white button">GitHub</a
   >
-  <a href="/posts" class="ml-4 text-lg text-white button"> Posts </a>
+  <a href="/posts" class="ml-4 text-lg text-white button" rel='prefetch'> Posts </a>
 </div>
 
 <style lang="scss">

@@ -1,8 +1,9 @@
+import mdx from '@astrojs/mdx'
 import netlify from '@astrojs/netlify/functions'
 import svelte from '@astrojs/svelte'
 import { defineConfig } from 'astro/config'
 
-import mdx from '@astrojs/mdx'
+import prefetch from '@astrojs/prefetch'
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,7 +11,12 @@ export default defineConfig({
     svelte(),
     mdx({
       syntaxHighlighting: 'shiki',
-      shikiConfig: { theme: 'min-dark' },
+      shikiConfig: {
+        theme: 'min-dark',
+      },
+    }),
+    prefetch({
+      throttle: 2,
     }),
   ],
   output: 'server',
