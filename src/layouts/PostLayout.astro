@@ -1,0 +1,20 @@
+---
+import '../styles/posts.scss';
+
+import PostsFooter from '../components/PostsFooter.astro';
+import PrimaryLayout from './PrimaryLayout.astro';
+
+const { frontmatter: { author, date } } = Astro.props;
+---
+
+<PrimaryLayout>
+  <!-- @ts-ignore -->
+  <a href='#' onclick={() => { history.back() }}>Back</a>
+  <div class='flex flex-col justify-center items-center w-screen'>
+    <div class='max-w-sm md:max-w-3xl'>
+      <slot />
+    </div>
+  </div>
+  <PostsFooter author={author} date={date}/>
+</PrimaryLayout>
+

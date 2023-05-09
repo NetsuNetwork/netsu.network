@@ -11,6 +11,7 @@ module.exports = {
           '--tw-prose-pre-bg': 'transparent',
           '--tw-prose-headings': 'white',
           '--tw-prose-links': 'white',
+          '--tw-prose-body': 'white',
         },
       }),
     },

@@ -21,14 +21,6 @@ body {
   scroll-behavior: smooth;
 }
 
-:where(h1) {
-  background: linear-gradient(to right, #b4d9ef, #f8c57c, #f8c57c);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  margin: 0 !important;
-}
-
 :where(h2) {
   color: white;
   opacity: 1;

@@ -1,0 +1,34 @@
+---
+import { Card } from 'accessible-astro-components';
+import PrimaryLayout from '../../layouts/PrimaryLayout.astro';
+
+const posts = await Astro.glob('./**/*.mdx')
+---
+
+<PrimaryLayout>
+  <div class='flex flex-col justify-center items-center w-screen h-screen'>
+  <h1>Blog Posts</h1>
+
+    <div class='not-prose'>
+      <ul>
+        {
+          posts.map((post) => (
+            <li>
+              <Card
+                url={`/posts/${post.frontmatter.slug}`}
+                title={post.frontmatter.title}
+                footer={post.frontmatter.author}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</PrimaryLayout>
+
+<style>
+  :where(small) {
+    --tw-prose-body: white;
+  }
+</style>

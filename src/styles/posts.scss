@@ -1,0 +1,7 @@
+:where(h1, h2, h3, p) {
+  color: white !important;
+}
+
+:where(blockquote p) {
+  opacity: 55%;
+}

@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^0.19.1",
     "@astrojs/netlify": "^2.2.2",
     "@astrojs/svelte": "^2.1.0",
     "@astrojs/vercel": "^3.2.5",
@@ -21,6 +22,7 @@
   "packageManager": "yarn@3.5.0",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
+    "accessible-astro-components": "^2.0.0",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"

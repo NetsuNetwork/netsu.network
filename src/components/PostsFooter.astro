@@ -1,0 +1,18 @@
+---
+const { date, author } = Astro.props
+---
+
+<div class='flex flex-row justify-center items-center w-screen'>
+  <p>&copy; Posted by <span class='font-bold'>{author}</span> on <time class='font-bold'>{date}</time></p>
+</div>
+
+<style>
+  :where(h1) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    @apply text-4xl;
+  }
+  :where(p) {
+    color: white;
+  }
+</style>
