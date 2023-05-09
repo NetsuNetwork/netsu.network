@@ -1,15 +1,17 @@
 ---
+import { SEO } from 'astro-seo';
 import '../styles/preflight.scss';
 ---
 
 <html lang='en'>
   <head>
-    <meta charset='utf-8' />
-    <link rel='icon' href='/favicon.ico' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    <meta name='description' content='Local Software Engineer(s)' />
-    <title>NetSu</title>
+    <SEO title='Netsu' description='Local Software Engineer(s)' extend={{
+      link: [{rel: 'icon', href: '/favicon.ico'}],
+      meta: [{
+        name: 'viewport', content: 'width=device-width'
+      },
+    { name: 'generator', content: Astro.generator }]
+    }}/>
 
     <script defer data-domain="netsu.network" src="https://analytics.uvvu.pw/js/script.js"></script>
   </head>
