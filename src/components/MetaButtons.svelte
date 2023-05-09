@@ -1,8 +1,8 @@
 <div class="grid grid-flow-col mt-5">
-  <a href="https://dev.astolfo.cafe" class="button text-lg text-white ml-4"
+  <a href="https://dev.astolfo.cafe" class="ml-4 text-lg text-white button"
     >Affiliate</a
   >
-  <a href="https://github.com/ArtieFuzzz" class="button text-lg text-white ml-4"
+  <a href="https://github.com/ArtieFuzzz" class="ml-4 text-lg text-white button"
     >GitHub</a
   >
 </div>

@@ -1,24 +1,27 @@
 ---
 import { Card } from 'accessible-astro-components';
+import BackButton from '../../components/BackButton.astro';
 import PrimaryLayout from '../../layouts/PrimaryLayout.astro';
 
 const posts = await Astro.glob('./**/*.mdx')
 ---
 
 <PrimaryLayout>
-  <div class='flex flex-col justify-center items-center w-screen h-screen'>
+  <BackButton/>
+  <div class='flex flex-col justify-center items-center w-screen h-[90vh]'>
   <h1>Blog Posts</h1>
 
     <div class='not-prose'>
-      <ul>
+      <ul class='flex flex-row items-center justify-center w-screen'>
         {
           posts.map((post) => (
-            <li>
+            <li class='m-3'>
               <Card
                 url={`/posts/${post.frontmatter.slug}`}
                 title={post.frontmatter.title}
-                footer={post.frontmatter.author}
-              />
+                footer={`Posted by ${post.frontmatter.author} on ${post.frontmatter.date}`}
+                img={post.frontmatter.background ?? '/post_background.jpg'}
+              >{post.frontmatter.description}</Card>
             </li>
           ))
         }
@@ -26,9 +29,3 @@ const posts = await Astro.glob('./**/*.mdx')
     </div>
   </div>
 </PrimaryLayout>
-
-<style>
-  :where(small) {
-    --tw-prose-body: white;
-  }
-</style>

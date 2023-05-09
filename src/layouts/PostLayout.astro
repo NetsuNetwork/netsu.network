@@ -1,7 +1,7 @@
 ---
 import '../styles/posts.scss';
 
-import PostBackButton from '../components/PostBackButton.astro';
+import BackButton from '../components/BackButton.astro';
 import PostsFooter from '../components/PostFooter.astro';
 import PrimaryLayout from './PrimaryLayout.astro';
 
@@ -10,8 +10,8 @@ const { frontmatter: { author, date } } = Astro.props;
 
 <PrimaryLayout>
   <!-- @ts-ignore -->
-  <PostBackButton/>
-  <div class='flex flex-col justify-center items-center w-screen'>
+  <BackButton/>
+  <div class='flex flex-col items-center justify-center w-screen mt-5'>
     <div class='max-w-sm md:max-w-3xl'>
       <slot />
     </div>

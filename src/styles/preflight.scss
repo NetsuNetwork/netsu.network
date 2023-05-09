@@ -26,3 +26,7 @@ body {
   opacity: 1;
   transition: opacity 2s ease-in-out;
 }
+
+:where([astro-icon]) {
+  color: white;
+}

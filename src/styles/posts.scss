@@ -5,3 +5,23 @@
 :where(blockquote p) {
   opacity: 55%;
 }
+
+:where(.card) {
+  border: 1px solid black !important;
+}
+
+:where(.card) {
+  h3 {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 250;
+    font-style: italic;
+  }
+
+  small {
+    color: white !important;
+  }
+}
