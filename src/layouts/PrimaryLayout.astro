@@ -5,19 +5,34 @@ import '../styles/preflight.scss';
 
 <html lang='en'>
   <head>
-    <SEO title='Netsu' description='Local Software Engineer(s)' extend={{
-      link: [{rel: 'icon', href: '/favicon.ico'}],
-      meta: [{
-        name: 'viewport', content: 'width=device-width'
-      },
-    { name: 'generator', content: Astro.generator }]
-    }}/>
+    <SEO
+      charset='utf8'
+      title='Netsu'
+      description='Local Software Engineer(s)'
+      extend={{
+        link: [{ rel: 'icon', href: '/favicon.ico' }],
+        meta: [
+          {
+            name: 'viewport',
+            content: 'width=device-width',
+          },
+          { name: 'generator', content: Astro.generator },
+        ],
+      }}
+    />
 
-    <script defer data-domain="netsu.network" src="https://analytics.uvvu.pw/js/script.js"></script>
+    <script
+      defer
+      data-domain='netsu.network'
+      src='https://analytics.uvvu.pw/js/script.js'
+    ></script>
   </head>
 
   <body>
-    <div class='h-screen w-screen max-w-2xl prose prose-zinc' style='margin: none !important;'>
+    <div
+      class='h-screen w-screen max-w-2xl prose prose-zinc'
+      style='margin: none !important;'
+    >
       <slot />
     </div>
   </body>
