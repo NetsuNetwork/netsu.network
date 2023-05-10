@@ -12,10 +12,9 @@ const { frontmatter: { author, date } } = Astro.props;
   <!-- @ts-ignore -->
   <BackButton/>
   <div class='flex flex-col items-center justify-center w-screen mt-5'>
-    <div class='max-w-sm md:max-w-3xl'>
+    <div class='max-w-sm m-4 mb-0 md:m-0 md:max-w-3xl'>
       <slot />
     </div>
   </div>
   <PostsFooter author={author} date={date}/>
 </PrimaryLayout>
-

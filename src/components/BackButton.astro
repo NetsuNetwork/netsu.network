@@ -3,9 +3,13 @@ import { Icon } from 'astro-icon';
 ---
 
 <div class='items-start justify-start w-screen mt-4 ml-5'>
-  <div class='flex flex-row place-items-center'>
-    <Icon pack='mdi' name='backburger' size={32}/>
-    <a href='#' class='text-xl font-extrabold text-white' onclick='history.back()'>Back</a>
+  <div class='hidden md:visible md:flex md:flex-row md:place-items-center'>
+    <Icon pack='mdi' name='backburger' size={32} />
+    <a
+      href='#'
+      class='text-xl font-extrabold text-white'
+      onclick='history.back()'>Back</a
+    >
   </div>
 </div>
 
