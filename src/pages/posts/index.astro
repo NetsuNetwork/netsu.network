@@ -7,9 +7,12 @@ const posts = await Astro.glob('./**/*.mdx')
 ---
 
 <PrimaryLayout>
-  <BackButton/>
+  <div class='hidden md:visible'>
+    <BackButton />
+  </div>
+
   <div class='flex flex-col justify-center items-center w-screen h-[90vh]'>
-  <h1>Blog Posts</h1>
+    <h1>Blog Posts</h1>
 
     <div class='not-prose'>
       <ul class='flex flex-row items-center justify-center w-screen'>
@@ -21,7 +24,9 @@ const posts = await Astro.glob('./**/*.mdx')
                 title={post.frontmatter.title}
                 footer={`Posted by ${post.frontmatter.author} on ${post.frontmatter.date}`}
                 img={post.frontmatter.background ?? '/post_background.jpg'}
-              >{post.frontmatter.description}</Card>
+              >
+                {post.frontmatter.description}
+              </Card>
             </li>
           ))
         }
