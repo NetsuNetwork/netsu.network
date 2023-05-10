@@ -7,9 +7,7 @@ const posts = await Astro.glob('./**/*.mdx')
 ---
 
 <PrimaryLayout>
-  <div class='hidden md:visible'>
-    <BackButton />
-  </div>
+  <BackButton />
 
   <div class='flex flex-col justify-center items-center w-screen h-[90vh]'>
     <h1>Blog Posts</h1>
