@@ -1,3 +1,5 @@
+@import url('https://api.fonts.coollabs.io/css2?family=IBM+Plex+Sans&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +11,10 @@
 //     border-color: red;
 // }
 
+@mixin white-text-with-font {
+  color: white;
+  font-family: 'IBM Plex Sans';
+}
 
 * {
   box-sizing: border-box;
@@ -22,9 +28,18 @@ body {
 }
 
 :where(h2) {
-  color: white;
   opacity: 1;
   transition: opacity 2s ease-in-out;
+}
+
+:where(#who) {
+  p {
+    @include white-text-with-font;
+  }
+
+  h2 {
+    color: white !important;
+  }
 }
 
 :where([astro-icon]) {
