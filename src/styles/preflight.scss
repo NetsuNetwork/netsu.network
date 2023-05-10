@@ -32,7 +32,7 @@ body {
   transition: opacity 2s ease-in-out;
 }
 
-:where(#who) {
+:where(#info-card) {
   p {
     @include white-text-with-font;
   }
