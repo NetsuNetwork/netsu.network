@@ -15,12 +15,14 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
 </script>
 
 <PrimaryLayout>
-  <Title />
+  <div class='w-screen h-screen main-bg'>
+    <Title />
+  </div>
 
-  <div class='pt-5 m-10 mt-0 ml-0 mr-0'>
+  <div class='w-screen h-screen secondary-bg glow'>
     <div
       id='info-card'
-      class='flex flex-row items-start justify-start w-screen pl-28 place-items-baseline'
+      class='flex flex-row items-start justify-start w-screen pt-5 pl-28 place-items-baseline'
     >
       <div class='max-w-xl blind'>
         <h2 class='text-4xl font-bold'>Woah</h2>
@@ -28,7 +30,7 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
           Who are we? What are we? In a nutshell, it's just a singular
           developer, me (Artie), I just roam the internet and if something were
           to peak my interest, there's a great chance I'll rewrite it in Elixir
-          or Rust
+          or Rust.
         </p>
       </div>
     </div>
@@ -56,5 +58,17 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
 
   :where(div .show) {
     opacity: 1;
+  }
+
+  :where(div .main-bg) {
+    background-color: #1C1E1E;
+  }
+
+  :where(div .secondary-bg) {
+    background-color: #28282b;
+  }
+
+  :where(div .glow) {
+    box-shadow: 0 0 30px white;
   }
 </style>
