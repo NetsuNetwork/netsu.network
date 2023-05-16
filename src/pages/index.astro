@@ -6,60 +6,55 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show')
-      } else {
-        entry.target.classList.remove('show')
-      }
+      entry.target.classList.toggle('show', entry.isIntersecting)
     })
   })
-  const elements = document.querySelectorAll('.shadow')
-  elements.forEach(elem => observer.observe(elem))
+
+  const elements = document.querySelectorAll('.blind')
+  elements.forEach((elem) => observer.observe(elem))
 </script>
 
 <PrimaryLayout>
   <Title />
 
-  <div
-    id='info-card'
-    class='flex flex-row items-start justify-start w-screen pl-28 place-items-baseline'
-  >
-    <div class='mt-10 max-w-xl shadow'>
-      <h2 class='text-4xl font-bold'>Woah</h2>
-      <p>
-        Who are we? What are we? In a nutshell, currently it's just me (Artie)
-        who's in the group and I wannna somewhat expand this group to include my
-        other friends, I don't care if they know how to code I'll teach them, I
-        just want to get more members and collaborate.
-      </p>
+  <div class='pt-5 m-10 mt-0 ml-0 mr-0'>
+    <div
+      id='info-card'
+      class='flex flex-row items-start justify-start w-screen pl-28 place-items-baseline'
+    >
+      <div class='max-w-xl blind'>
+        <h2 class='text-4xl font-bold'>Woah</h2>
+        <p>
+          Who are we? What are we? In a nutshell, it's just a singular
+          developer, me (Artie), I just roam the internet and if something were
+          to peak my interest, there's a great chance I'll rewrite it in Elixir
+          or Rust
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div
-    id='info-card'
-    class='flex flex-row items-start justify-end w-screen mt-5 pr-28 place-items-baseline'
-  >
-    <div class='max-w-xl shadow'>
-      <h2 class='mt-0 text-4xl font-bold'>Members</h2>
-      <p>
-        Hey, I'm Artie! The only Member and Lead-Developer in this organization,
-        I'm only accepting friends so please, don't attempt to join if I don't
-        know you.
-      </p>
+    <div
+      id='info-card'
+      class='flex flex-row items-start justify-end w-screen mt-5 pr-28 place-items-baseline'
+    >
+      <div class='mt-[20vh] max-w-xl blind'>
+        <h2 class='mt-0 text-4xl font-bold'>What we Build</h2>
+        <p>
+          We primarily rebuild applications in other languages such as Elixir
+          and Rust, and customize it to our requirements, etc.
+        </p>
+      </div>
     </div>
   </div>
 </PrimaryLayout>
 
 <style>
-  :where(div .shadow) {
+  :where(div .blind) {
     opacity: 0;
-    filter: blur(25%);
-    transition: all 1s ease-in-out;
+    transition: opacity 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   :where(div .show) {
-    transform: translateX(0);
     opacity: 1;
   }
-
 </style>
