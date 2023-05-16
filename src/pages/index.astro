@@ -19,12 +19,12 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
     <Title />
   </div>
 
-  <div class='w-screen h-screen secondary-bg glow'>
+  <div class='w-screen h-screen p-2 pt-0 pb-0 pr-0 md:p-0 secondary-bg glow'>
     <div
       id='info-card'
-      class='flex flex-row items-start justify-start w-screen pt-5 pl-28 place-items-baseline'
+      class='flex flex-row items-start justify-start w-screen pt-6 md:pl-24 place-items-baseline blind'
     >
-      <div class='max-w-xl blind'>
+      <div class='max-w-xl'>
         <h2 class='text-4xl font-bold'>Woah</h2>
         <p>
           Who are we? What are we? In a nutshell, it's just a singular
@@ -37,9 +37,9 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
 
     <div
       id='info-card'
-      class='flex flex-row items-start justify-end w-screen mt-5 pr-28 place-items-baseline'
+      class='flex flex-row items-start justify-end w-screen mt-5 pr-28 place-items-baseline blind'
     >
-      <div class='mt-[20vh] max-w-xl blind'>
+      <div class='mt-[10vh]  md:mt-[15vh] max-w-xl'>
         <h2 class='mt-0 text-4xl font-bold'>What we Build</h2>
         <p>
           We primarily rebuild applications in other languages such as Elixir
