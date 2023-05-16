@@ -3,6 +3,20 @@ import Title from '../components/Title.astro';
 import PrimaryLayout from '../layouts/PrimaryLayout.astro';
 ---
 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show')
+      } else {
+        entry.target.classList.remove('show')
+      }
+    })
+  })
+  const elements = document.querySelectorAll('.shadow')
+  elements.forEach(elem => observer.observe(elem))
+</script>
+
 <PrimaryLayout>
   <Title />
 
@@ -10,8 +24,8 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
     id='info-card'
     class='flex flex-row items-start justify-start w-screen pl-28 place-items-baseline'
   >
-    <div class='max-w-xl'>
-      <h2 class='mt-0 text-4xl font-bold'>Woah</h2>
+    <div class='mt-10 max-w-xl shadow'>
+      <h2 class='text-4xl font-bold'>Woah</h2>
       <p>
         Who are we? What are we? In a nutshell, currently it's just me (Artie)
         who's in the group and I wannna somewhat expand this group to include my
@@ -25,7 +39,7 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
     id='info-card'
     class='flex flex-row items-start justify-end w-screen mt-5 pr-28 place-items-baseline'
   >
-    <div class='max-w-xl'>
+    <div class='max-w-xl shadow'>
       <h2 class='mt-0 text-4xl font-bold'>Members</h2>
       <p>
         Hey, I'm Artie! The only Member and Lead-Developer in this organization,
@@ -35,3 +49,17 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
     </div>
   </div>
 </PrimaryLayout>
+
+<style>
+  :where(div .shadow) {
+    opacity: 0;
+    filter: blur(25%);
+    transition: all 1s ease-in-out;
+  }
+
+  :where(div .show) {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+</style>
