@@ -6,7 +6,6 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      console.log(entry.intersectionRatio)
       entry.target.classList.toggle('show', entry.isIntersecting)
     })
   })
