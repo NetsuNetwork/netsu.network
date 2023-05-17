@@ -16,6 +16,12 @@
       text-decoration: none;
       border-width: 3px;
       padding: 10px;
+
+      transition: 0.1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    }
+
+    .button:hover {
+      transform: scale(1.2);
     }
   }
 </style>
