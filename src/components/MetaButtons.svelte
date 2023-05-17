@@ -17,7 +17,7 @@
       border-width: 3px;
       padding: 10px;
 
-      transition: 0.1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transition: 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);
     }
 
     .button:hover {
