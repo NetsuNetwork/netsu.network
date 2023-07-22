@@ -65,26 +65,26 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
   }
 
   :where(div .secondary-bg) {
-    background-color: #28282b; 
+    background-color: #28282b;
     background-image: url('/wave-haikei.svg');
     background-blend-mode: overlay;
   }
 
   :where(div .glow) {
-    animation: glow 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+    animation: glow 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite none;
   }
 
   @keyframes glow {
     10% {
-      box-shadow: 0 0 20px white;
+      box-shadow: 0 0 0px white;
     }
 
     50% {
-      box-shadow: 0 0 30px white;
+      box-shadow: 0 0 25px white;
     }
 
     100% {
-      box-shadow: 0 0 20px white;
+      box-shadow: 0 0 0px white;
     }
   }
 </style>
