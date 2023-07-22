@@ -1,6 +1,6 @@
 ---
-import Title from '../components/Title.astro';
-import PrimaryLayout from '../layouts/PrimaryLayout.astro';
+import Title from '../components/Title.astro'
+import PrimaryLayout from '../layouts/PrimaryLayout.astro'
 ---
 
 <script>
@@ -22,15 +22,13 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
   <div class='w-screen h-screen md:p-0 secondary-bg glow'>
     <div
       id='info-card'
-      class='flex flex-row items-start justify-start w-screen pt-8 md:pl-20 place-items-baseline '
+      class='flex flex-row items-start justify-start w-screen pt-8 md:pl-20 place-items-baseline'
     >
       <div class='max-w-xl pt-12 blind'>
-        <h2 class='text-4xl md:text6xl font-bold'>Woah</h2>
+        <h2 class='text-4xl md:text6xl font-bold'>Welcome!</h2>
         <p class='text-lg'>
-          Who are we? What are we? In a nutshell, it's just a singular
-          developer, me (Artie), I just roam the internet and if something were
-          to peak my interest, there's a great chance I'll rewrite it in Elixir
-          or Rust.
+          There currently isn't much going on with this group right now, maybe
+          in the future things will get running! For now we're dormant.
         </p>
       </div>
     </div>
@@ -39,11 +37,11 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
       id='info-card'
       class='flex flex-row items-start justify-end w-screen pr-28 place-items-baseline blind'
     >
-      <div class='mt-[10vh]  md:mt-[15vh] max-w-xl'>
+      <div class='mt-[10vh] md:mt-[15vh] max-w-xl'>
         <h2 class='mt-0 text-4xl md:text6xl font-bold'>What we Build</h2>
         <p class='text-lg'>
-          We primarily rebuild applications in other languages such as Elixir
-          and Rust, and customize it to our requirements, etc.
+          We primarily rebuild applications we find on the Internet in other languages such as Elixir
+          and Rust, and customize it to our requirements.
         </p>
       </div>
     </div>
@@ -61,7 +59,7 @@ import PrimaryLayout from '../layouts/PrimaryLayout.astro';
   }
 
   :where(div .main-bg) {
-    background-color: #1C1E1E;
+    background-color: #1c1e1e;
   }
 
   :where(div .secondary-bg) {
