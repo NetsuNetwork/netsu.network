@@ -2,6 +2,10 @@
   color: white !important;
 }
 
+:where(h1) {
+  text-decoration: underline;
+}
+
 :where(blockquote p) {
   opacity: 55%;
 }
